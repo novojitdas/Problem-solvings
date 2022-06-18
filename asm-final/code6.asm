@@ -10,7 +10,7 @@ array db 10dup(0)
 mov ah,9
 lea dx,str
 int 21h
-mov cx,10
+mov cx,7
 mov bx,offset array
 mov ah,1
 
@@ -20,7 +20,7 @@ mov [bx],al
 inc bx
 Loop inputs
 
-mov cx,10
+mov cx,7
 dec cx
 
 nextscan:
@@ -46,7 +46,7 @@ mov ah,9
 lea dx,str1
 int 21h
 
-mov cx,10
+mov cx,7
 mov bx,offset array
 
 print:
