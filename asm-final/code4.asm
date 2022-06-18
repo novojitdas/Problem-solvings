@@ -1,0 +1,25 @@
+.MODEL small
+.STACK 100h
+.DATA
+    ARR db 25h,12h,15h,1Fh,2Bh
+    sum db 0 
+    ANS DW ?
+  
+.CODE
+MAIN PROC
+    MOV AX,@DATA
+    MOV DS,AX
+MOV CX,5
+MOV AX,0
+MOV BX,1
+LABEL:
+ADD AX,BX
+ADD BX,3 
+MOV ANS,AX
+LOOP LABEL
+  END MAIN
+ret
+
+
+
+
